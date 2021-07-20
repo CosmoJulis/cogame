@@ -11,30 +11,50 @@
 #include <thread>
 #include <chrono>
 #include <atomic>
+#include <any>
 
-std::atomic<int> count = {0};
+#include "common.hpp"
+#include "item.hpp"
+class MyItem : public co::item {
+    using co::item::item;
+};
 
-int main(int argc, const char * argv[]) {
 
-//    std::packaged_task<int()> task([](){
-//        std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-//        return 7;
-//    });
-//    std::future<int> result = task.get_future();
-
-//    std::thread(std::move(task)).detach();
-    
-//    std::cout << "waiting...\n";
+//template <class T, class U>
+//struct is_kind_of : public std::false_type {
 //
-//    result.wait();
+//};
 //
-//    int ret = result.get();
-//    std::cout << ret << std::endl;
+//template <class T>
+//struct is_kind_of<T, T> : public std::true_type {
+//
+//};
+//
+//template<class T, class U>
+//bool is_kind_of_v = is_kind_of<T, U>::value;
 
-    
 
+int main()
+{
+    auto mi = MyItem();
+//    if (is_kind_of_item(mi)) {
+//        std::cout << "is\n";
+//    } else {
+//        std::cout << "is not\n";
+//
+//    }
     
-    
-    
+    if (std::is_base_of<co::item, MyItem>::value) {
+        std::cout << "is base\n";
+    } else {
+        std::cout << "not base\n";
+    }
+//
+    if (co::is_kind_of_v<int, int>) {
+        std::cout << "same\n";
+    } else {
+        std::cout << "not same\n";
+    }
+//
     return 0;
 }

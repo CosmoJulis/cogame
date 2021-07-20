@@ -5,8 +5,9 @@
 //  Created by Cosmo Julis on 7/16/21.
 //
 
-#ifndef cooldown_hpp
-#define cooldown_hpp
+#pragma once
+#include "common.hpp"
+
 
 namespace co {
 
@@ -18,4 +19,3 @@ public:
 
 }
 
-#endif /* cooldown_hpp */
