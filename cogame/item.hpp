@@ -32,10 +32,13 @@ private:
 };
 
 template <typename T>
+struct is_kind_of_item : public is_kind_of<T, item> { };
+
+template <typename T>
+inline
 constexpr
-inline bool is_kind_of_item(const T & t) {
-    return is_kind_of<T, item>(t);
-}
+bool is_kind_of_item_v = is_kind_of_v<T, item>;
+
 
 class item_attribute {
     

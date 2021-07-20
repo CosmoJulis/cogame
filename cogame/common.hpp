@@ -11,33 +11,17 @@
 
 namespace co {
 
-//template <typename T, typename U>
-//constexpr
-//bool is_kind_of(const T & t) {
-//    return static_cast<const U *>(&t);
-//}
-//
-//template <typename T, typename U>
-//constexpr
-//bool is_virtual_of(const T & t) {
-//    return dynamic_cast<const U *>(&t);
-//}
-
-//template<typename T, typename U>
-//struct {
-//
-//}
-
 template <typename T, typename U>
 struct is_kind_of {
-//    static bool value = std::is_base_of<T, U>::value;
+    static constexpr bool value = std::is_base_of<U, T>::value;
 };
 
 template <typename T>
 struct is_kind_of<T, T> : public std::true_type { };
 
 template<typename T, typename U>
+inline
+constexpr
 bool is_kind_of_v = is_kind_of<T, U>::value;
-
 
 }

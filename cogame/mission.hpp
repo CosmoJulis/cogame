@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include "common.hpp"
 #include <boost/poly_collection/base_collection.hpp>
 
 namespace co {
@@ -68,10 +69,14 @@ public:
 };
 
 template <typename T>
+struct is_kind_of_mission : public is_kind_of<T, mission> { };
+
+template <typename T>
+inline
 constexpr
-inline bool is_kind_of_mission(const T & t) {
-    return is_kind_of<T, mission>(t);
-}
+bool is_kind_of_mission_v = is_kind_of_v<T, mission>;
+
+
 
 
 class mission_trigger {

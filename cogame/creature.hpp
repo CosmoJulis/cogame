@@ -26,11 +26,14 @@ private:
     // 
 };
 
+
 template <typename T>
+struct is_kind_of_creature : public is_kind_of<T, creature> { };
+
+template <typename T>
+inline
 constexpr
-inline bool is_kind_of_creature(const T & t) {
-    return is_kind_of<T, creature>(t);
-}
+bool is_kind_of_creature_v = is_kind_of_v<T, creature>;
 
 
 
