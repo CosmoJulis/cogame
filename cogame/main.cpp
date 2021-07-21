@@ -6,7 +6,6 @@
 //
 
 #include <iostream>
-#include "mission.hpp"
 #include <future>
 #include <thread>
 #include <chrono>
@@ -14,20 +13,26 @@
 #include <any>
 
 #include "common.hpp"
-#include "item.hpp"
-class MyItem : public co::item {
-    using co::item::item;
-};
+#include "mission_table.hpp"
+
+#include "mission.hpp"
 
 
 
 int main()
 {
-    if (co::is_kind_of_item_v<MyItem>) {
-        std::cout << "same\n";
-    } else {
-        std::cout << "not same\n";
-    }
-//
+
+    using namespace co::mission_ns;
+    
+    mission m = mission(7);
+    table mt;
+    mt.missions.insert(m);
+
+
+
+    
+
+    
+    
     return 0;
 }

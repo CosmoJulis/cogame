@@ -6,3 +6,7 @@
 //
 
 #include "item.hpp"
+#include "mission.hpp"
+
+
+using namespace co;
