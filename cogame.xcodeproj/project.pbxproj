@@ -44,6 +44,7 @@
 		684E9C6126A7BF2200F85CC6 /* mission_requirement_count.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 684E9C5F26A7BF2200F85CC6 /* mission_requirement_count.cpp */; };
 		6880EBB326A5C4FB0083E538 /* item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6880EBB126A5C4FB0083E538 /* item.cpp */; };
 		68817B1B26A6469E006FC791 /* creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68817B1926A6469E006FC791 /* creature.cpp */; };
+		68AC6D4726A85B72003CF5B3 /* base_count.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68AC6D4526A85B72003CF5B3 /* base_count.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,6 +108,8 @@
 		68817B1926A6469E006FC791 /* creature.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = creature.cpp; sourceTree = "<group>"; };
 		68817B1A26A6469E006FC791 /* creature.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = creature.hpp; sourceTree = "<group>"; };
 		68817B1D26A67302006FC791 /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
+		68AC6D4526A85B72003CF5B3 /* base_count.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = base_count.cpp; sourceTree = "<group>"; };
+		68AC6D4626A85B72003CF5B3 /* base_count.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base_count.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 				6836C4DB26A6B2BA00F07205 /* base_property.hpp */,
 				6836C4D126A6ADED00F07205 /* base_related_mission.cpp */,
 				6836C4D226A6ADED00F07205 /* base_related_mission.hpp */,
+				68AC6D4526A85B72003CF5B3 /* base_count.cpp */,
+				68AC6D4626A85B72003CF5B3 /* base_count.hpp */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				6836C4E526A6C2AD00F07205 /* mission_reward.cpp in Sources */,
 				6836C4E226A6BE3000F07205 /* mission_target.cpp in Sources */,
 				6880EBB326A5C4FB0083E538 /* item.cpp in Sources */,
+				68AC6D4726A85B72003CF5B3 /* base_count.cpp in Sources */,
 				6836C4DF26A6BA2900F07205 /* mission_requirement.cpp in Sources */,
 				6836C4DC26A6B2BA00F07205 /* base_property.cpp in Sources */,
 				68157E0026A18C0500281589 /* timer.cpp in Sources */,

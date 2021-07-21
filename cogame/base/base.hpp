@@ -9,4 +9,5 @@
 
 #include "base_property.hpp"
 #include "base_related_mission.hpp"
+#include "base_count.hpp"
 

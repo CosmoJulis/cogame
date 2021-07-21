@@ -20,7 +20,8 @@ property(id)
 {
     // debug
     if (id == 7) {
-        _items.insert(make_requirement_count(item(7), 7));
+//        _item_ids.push_back(make_requirement_count<item>(7, 7));
+        _items.insert(make_requirement_count<item>(item(7), 7));
     }
 }
 
@@ -29,14 +30,24 @@ requirement::~requirement() {
 }
 
 bool requirement::is_checked() const {
-//    if () {
-        // TODO: user_item_table find items count > req.item.count
-//    }
-    if (_missions.size() > 0) {
-        for (const auto & mc : _missions) {
+    
+//    if (_mission_ids.size() > 0) {
+//        for (const auto & mc : _mission_ids) {
 //            if (!mc.is_checked()) return false;
-        }
-    }
+//        }
+//    }
+//
+//    if (_item_ids.size() > 0) {
+//        for (const auto & ic : _item_ids) {
+//            if (!ic.is_checked()) return false;
+//        }
+//    }
+//
+//    if (_creature_ids.size() > 0) {
+//        for (const auto & cc : _creature_ids) {
+//            if (!cc.is_checked()) return false;
+//        }
+//    }
     
     if (_items.size() > 0) {
         for (const auto & ic : _items) {
@@ -47,6 +58,12 @@ bool requirement::is_checked() const {
     if (_creatures.size() > 0) {
         for (const auto & cc : _creatures) {
             if (!cc.is_checked()) return false;
+        }
+    }
+    
+    if (_missions.size() > 0) {
+        for (const auto & mc : _missions) {
+            if (!mc.is_checked()) return false;
         }
     }
     

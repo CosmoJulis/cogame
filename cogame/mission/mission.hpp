@@ -8,14 +8,18 @@
 #pragma once
 
 #include "common.hpp"
-#include "item.hpp"
-#include "creature.hpp"
 #include "mission_requirement.hpp"
 #include "mission_target.hpp"
 #include "mission_reward.hpp"
 
 
-namespace co::mission_ns {
+namespace co {
+
+namespace mission_ns {
+
+//class requirement;
+//class target;
+//class reward;
 
 micro_co_is_kind_of(mission);
 
@@ -29,14 +33,14 @@ public:
     
 protected:
 
-    // mission trigger
-    boost::base_collection<requirement> _requirements;
+    // mission requirements
+    std::vector<std::shared_ptr<requirement>> _requirements;
     
     // mission targets
-    boost::base_collection<target> _targets;
+    std::vector<std::shared_ptr<target>> _targets;
     
     // mission rewards
-    boost::base_collection<reward> _rewards;
+    std::vector<std::shared_ptr<reward>> _rewards;
     
 // 任务触发相关
 public:
@@ -50,30 +54,11 @@ public:
 
     // 任务与其相关联
     template <typename T>
-    bool is_related(const T & t) const {
-        if constexpr (item_ns::is_kind_of_item_v<T> ||
-                      creature_ns::is_kind_of_creature_v<T> ||
-                      mission_ns::is_kind_of_mission_v<T> ) {
-            return t.is_related_mission(get_id());
-        } else {
-            return false;
-        }
-    }
+    bool is_related(const T & t) const;
     
     // 更新任务的进度
     template <typename T>
-    void update(const T & t) {
-        std::cout << "进度更新\n";
-        if constexpr (item_ns::is_kind_of_item_v<T>) {
-            
-        } else if (creature_ns::is_kind_of_creature_v<T>) {
-        
-        } else if (mission_ns::is_kind_of_mission_v<T>) {
-        
-        } else {
-        
-        }
-    }
+    void update(const T & t);
 
 // 任务完成相关
 public:
@@ -104,8 +89,13 @@ public:
 // 任务关闭相关
 public:
     
-    // 任务关闭
-    virtual void close() {
+    // 任务是否结束
+    virtual bool is_end() const {
+        return false;
+    }
+    
+    // 任务结束
+    virtual void end() {
         
     }
     
@@ -123,5 +113,7 @@ public:
     }
 
 };
+
+}
 
 }

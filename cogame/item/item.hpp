@@ -17,13 +17,15 @@ micro_co_is_kind_of(item);
 
 //class item_attribute;
 
-class item : public base::property, public base::related_mission
+class item : public base::property, public base::count, public base::related_mission
 {
 public:
     item(int id = 0,
-         std::string name = "<untitled>") :
+         std::string name = "<untitled>",
+         int number = 0) :
     base::property(id,
-                  name)
+                  name),
+    base::count(number)
     {
         
     }

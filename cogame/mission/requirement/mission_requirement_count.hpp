@@ -8,12 +8,15 @@
 #pragma once
 
 #include "common.hpp"
-#include "item.hpp"
-#include "creature.hpp"
-//#include "mission.hpp"
 
 
-namespace co::mission_ns {
+
+namespace co {
+
+namespace item_ns { class item; }
+namespace creature_ns { class creature; }
+
+namespace mission_ns {
 
 template <typename T>
 class requirement_count {
@@ -27,34 +30,28 @@ public:
     std::unique_ptr<T> get_entry() const {
         return std::make_unique<T>(_t);
     }
-
+    
     int get_count() const {
         return _count;
     }
-    
-    bool is_checked() const {
-        if constexpr (item_ns::is_kind_of_item_v<T>) {
-            
-        }
-        else if (creature_ns::is_kind_of_creature_v<T>) {
 
-        }
-//        else if (mission_ns::is_kind_of_mission_v(T)) {
-//        }
-        return true;
-    }
+    bool is_checked() const;
+
 
 protected:
     const T & _t;
     const int _count;
-    
 };
+
 
 template <typename T>
 inline
 constexpr
-auto make_requirement_count(T && t, int i) {
-    return std::forward<requirement_count<T>>(requirement_count<T>(std::forward<T>(t), i));
+auto make_requirement_count(T && t, int count) {
+    return std::forward<requirement_count<T>>(requirement_count<T>(std::forward<T>(t), count));
 }
 
 }
+
+}
+
