@@ -17,6 +17,23 @@
 
 namespace co {
 
+namespace base {
+
+class exception : public std::exception
+{
+public:
+    exception(const std::string & error) noexcept :
+    _error(error) { }
+    
+    const char * what() const noexcept override
+    {
+        return _error.c_str();
+    }
+private:
+    std::string _error;
+};
+
+}
 
 
 /*

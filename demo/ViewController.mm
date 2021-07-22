@@ -6,16 +6,16 @@
 //
 
 #import "ViewController.h"
-#include "user_mission_table.hpp"
+#include "user_quest_table.hpp"
 #include "user_item_table.hpp"
 
 using namespace co;
 using namespace user;
-using namespace mission_ns;
+using namespace quest_ns;
 using namespace item_ns;
 
-mission_table * pmt = mission_table::get_table();
-item_table * pit = item_table::get_table();
+quest_table & uqt = quest_table::get_user_table();
+item_table & uit = item_table::get_user_table();
 
 
 @interface ViewController ()
@@ -28,21 +28,17 @@ item_table * pit = item_table::get_table();
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    mission m (7);
-//    pmt->missions.insert(m);
     
-    
-//    for (auto & i : pmt->missions) {
-//        i.logRequirement();
-//    }
+    quest q (7);
+    uqt.quest_map[7] = q;
 }
 
 - (IBAction)requirementButtonDidTap:(id)sender {
     if (self.meet) return;
-    for (const auto & m : pmt->missions) {
-        if (m.meet()) {
+    for (const auto & [id, q] : uqt.quest_map) {
+        if (q.is_meet()) {
             self.meet = true;
-            std::cout << "mission meet\n";
+            std::cout << "quest meet\n";
             return;
         }
     }
@@ -55,21 +51,18 @@ item_table * pit = item_table::get_table();
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     item i (std::rand()%3 + 5);
-    pit->items.insert(i);
+    item & ti = uit.item_map[i.get_id()];
+    ti.increase_count(1);
     
     std::cout << "make item " << i.get_id() << std::endl;
     
-    for (auto & m : pmt->missions) {
-        if (i.is_related_mission(m)) {
-            if (m.meet()) {
-                m.update(i);
-            } else {
-                m.logRequirement();
+    for (auto & [id, q] : uqt.quest_map) {
+        if (i.is_related(q.get_id())) {
+            if (q.is_meet()) {
+                q.update(i.get_id());
             }
         }
-        m.logRequirement();
     }
-
 
 
 }

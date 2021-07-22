@@ -15,11 +15,11 @@ namespace co::user {
 
 class item_table {
 public:
-    static item_table * get_table();
+    static item_table & get_user_table();
 private:
-    item_table() { };
+    static item_table * get_user_table_pointer();
 public:
-    boost::base_collection<item_ns::item> items;
+    std::unordered_map<int, item_ns::item> item_map;
 };
 
 }

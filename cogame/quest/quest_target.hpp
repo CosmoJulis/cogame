@@ -1,5 +1,5 @@
 //
-//  quest_requirement.hpp
+//  quest_target.hpp
 //  cogame
 //
 //  Created by Cosmo Julis on 7/22/21.
@@ -14,23 +14,20 @@ namespace co {
 
 namespace quest_ns {
 
-class requirement : public base::property, public base::check
-{
+class target : public base::property, public base::check {
 public:
-    static const requirement & load_from_id(const int & requirement_id);
-    
-public:
-    requirement(int id = 0);
-    virtual ~requirement();
+    target(int id = 0);
+    virtual ~target();
     
 protected:
+    // TODO: 可能需要有序展示
     std::unordered_map<int, int> _item_id_count_map;
+    std::unordered_map<int, int> _creature_id_count_map;
     std::unordered_set<int> _quest_id_set;
-    // 补充其他
     
 public:
     bool is_checked() const override;
-
+    
 };
 
 }

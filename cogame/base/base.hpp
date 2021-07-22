@@ -8,6 +8,7 @@
 #pragma once
 
 #include "base_property.hpp"
-#include "base_related_mission.hpp"
 #include "base_count.hpp"
+#include "base_related_quest.hpp"
+#include "base_check.hpp"
 

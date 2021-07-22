@@ -15,11 +15,11 @@
 
 namespace co::quest_ns {
 
-class quest : public base::property, public base::related_quest
+class quest : public base::property, public base::related_quest, public base::check
 {
 public:
     quest(int id = 0, const std::string & name = "<untitled>");
-    virtual ~mission();
+    virtual ~quest();
     
 protected:
     int _requirement_id = 0;
@@ -27,12 +27,13 @@ protected:
     int _reward_id = 0;
     
 public:
-    virtual bool meet() const;
+    virtual bool is_meet() const;
+    virtual void meet();
     
-    virtual bool is_related(const int & id) const;
+    virtual bool is_related(const int & id) const override;
     virtual void update(const int & id) const;
     
-    virtual bool is_complete() const;
+    virtual bool is_checked() const override;
     virtual void check();
     
     virtual bool has_reward() const;
@@ -44,7 +45,7 @@ public:
     virtual bool has_next() const;
     virtual std::vector<int> get_next() const;
     virtual bool is_single_next() const;
-    virtual void next(std::vector<int> & mission_ids);
+    virtual void next(std::vector<int> & quest_ids);
     
     virtual void cancel();
 };

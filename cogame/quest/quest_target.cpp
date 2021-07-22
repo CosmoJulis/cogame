@@ -1,8 +1,8 @@
 //
-//  base_count.cpp
+//  quest_target.cpp
 //  cogame
 //
 //  Created by Cosmo Julis on 7/22/21.
 //
 
-#include "base_count.hpp"
+#include "quest_target.hpp"

@@ -14,23 +14,48 @@ namespace co {
 
 namespace base {
 
+enum class type {
+    item,
+    quest,
+    quest_requirement,
+    quest_target,
+    quest_reward,
+    creature,
+    unknown,
+};
+
 class property {
 public:
-    property(int id = 0,
-                  std::string name = "<untitled>") :
+    property(type type = type::unknown,
+             int id = 0,
+             std::string name = "<untitled>") :
+    _type(type),
     _id(id),
     _name(name)
     {
         std::cout << "property id = " << id << std::endl;
     }
+    
+    virtual ~property() { }
+    
 protected:
+    type _type;
     int _id;
     std::string _name;
+    
 public:
-    int get_id() const {
+    virtual type get_type() const
+    {
+        return _type;
+    }
+    
+    virtual int get_id() const
+    {
         return _id;
     }
-    std::string get_name() const {
+    
+    virtual std::string get_name() const
+    {
         return _name;
     }
 };

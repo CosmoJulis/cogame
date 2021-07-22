@@ -6,7 +6,16 @@
 //
 
 #include "item.hpp"
-#include "mission.hpp"
 
 
 using namespace co;
+using namespace base;
+using namespace item_ns;
+
+item::item(int id, const std::string & name) :
+property(type::item, id, name)
+{
+    std::cout << "construct item id: " << id << std::endl;
+}
+
+item::~item() { }

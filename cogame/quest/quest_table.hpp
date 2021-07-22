@@ -15,12 +15,12 @@ namespace co::quest_ns {
 
 class table {
 public:
-    const table & get_global_table() const;
+    static table & get_global_table();
 private:
-    static const table * get_global_table_pointer();
+    static table * get_global_table_pointer();
     static void config_global_table(table * pt);
 public:
-    std::unordered_map<int, quest> all_quest;
+    std::unordered_map<int, quest> quest_map;
 };
 
 }

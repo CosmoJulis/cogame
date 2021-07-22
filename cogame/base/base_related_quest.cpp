@@ -8,7 +8,7 @@
 #include "base_related_quest.hpp"
 
 
-using namespace co;
+using namespace co::base;
 
 bool related_quest::is_related(const int & quest_id) const
 {

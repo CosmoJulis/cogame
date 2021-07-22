@@ -15,8 +15,9 @@ namespace co::base {
 class related_quest {
 protected:
     std::unordered_set<int> _related_quest_ids;
+    
 public:
-    bool is_related(const int & quest_id) const;
+    virtual bool is_related(const int & quest_id) const;
 };
 
 }

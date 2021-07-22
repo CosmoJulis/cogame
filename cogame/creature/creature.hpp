@@ -12,20 +12,11 @@
 
 namespace co::creature_ns {
 
-micro_co_is_kind_of(creature);
-
-class creature : public base::property, public base::related_mission
+class creature : public base::property, public base::related_quest
 {
 public:
-    creature(int id = 0,
-         std::string name = "<untitled>") :
-    base::property(id,
-                  name)
-    {
-        
-    }
-    
-    virtual ~creature() { }
+    creature(int id = 0, const std::string & name = "<untitled>");
+    virtual ~creature();
     
 private:
 

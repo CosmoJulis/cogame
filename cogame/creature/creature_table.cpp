@@ -6,3 +6,28 @@
 //
 
 #include "creature_table.hpp"
+
+
+using namespace co;
+using namespace creature_ns;
+
+table & table::get_global_table()
+{
+    return *get_global_table_pointer();
+}
+
+
+table * table::get_global_table_pointer()
+{
+    static table * p = nullptr;
+    if (p == nullptr) {
+        p = new table();
+        config_global_table(p);
+    }
+    return p;
+}
+
+void table::config_global_table(table * pt)
+{
+    // TODO:  加载所有生物
+}

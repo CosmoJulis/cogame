@@ -11,13 +11,13 @@
 using namespace co;
 using namespace quest_ns;
 
-const table & table::get_global_table() const
+table & table::get_global_table()
 {
-    return *get_global_table();
+    return *get_global_table_pointer();
 }
 
 
-const table * table::get_global_table_pointer()
+table * table::get_global_table_pointer()
 {
     static table * p = nullptr;
     if (p == nullptr) {
@@ -27,7 +27,7 @@ const table * table::get_global_table_pointer()
     return p;
 }
 
-void talbe::config_global_table(table * pt)
+void table::config_global_table(table * pt)
 {
     // TODO:  加载所有任务
 }
