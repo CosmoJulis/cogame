@@ -8,7 +8,8 @@
 #pragma once
 
 #include "common.hpp"
-
+#include <thread>
+#include <chrono>
 
 
 namespace co {
@@ -21,14 +22,32 @@ namespace mission_ns {
 template <typename T>
 class requirement_count {
 public:
-    requirement_count(T && t, int count) :
+    requirement_count(const T & t, int count) :
     _t(t), _count(count)
-    { }
+    {
+//        std::cout << "t.id" << this->get_id() << std::endl;
+//        auto s = std::thread([this](){
+//            std::this_thread::sleep_for(std::chrono::seconds(1));
+//            std::cout << "t.id" << this->get_id() << std::endl;
+//        });
+//        s.detach();
+    }
+    
+    requirement_count(const requirement_count & rc) :
+    _t(rc._t), _count(rc._count)
+    {
+        
+    }
+    
     
     virtual ~requirement_count() { }
     
-    std::unique_ptr<T> get_entry() const {
-        return std::make_unique<T>(_t);
+//    std::shared_ptr<T> get_entry() const {
+//        return std::make_shared<T>(_t);
+//    }
+    
+    int get_id() const {
+        return _t.get_id();
     }
     
     int get_count() const {
@@ -39,7 +58,7 @@ public:
 
 
 protected:
-    const T & _t;
+    T _t;
     const int _count;
 };
 
@@ -47,8 +66,8 @@ protected:
 template <typename T>
 inline
 constexpr
-auto make_requirement_count(T && t, int count) {
-    return std::forward<requirement_count<T>>(requirement_count<T>(std::forward<T>(t), count));
+auto make_requirement_count(const T & t, int count) {
+    return requirement_count<T>(t, count);
 }
 
 }

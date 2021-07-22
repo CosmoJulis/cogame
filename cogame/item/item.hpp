@@ -27,10 +27,19 @@ public:
                   name),
     base::count(number)
     {
-        
+        std::cout << "cons id = " << id << std::endl;
     }
     
-    virtual ~item() { }
+    item(const item & i) :
+    base::property(i),
+    base::count(i)
+    {
+        std::cout << "copy cons id = " << i._id << std::endl;
+    }
+    
+    virtual ~item() {
+        std::cout << "de cons\n";
+    }
     
 private:
     // item attribute

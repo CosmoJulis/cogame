@@ -11,7 +11,6 @@
 		68157DFA26A18BAE00281589 /* mission.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68157DF826A18BAE00281589 /* mission.cpp */; };
 		68157DFD26A18BDB00281589 /* cooldown.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68157DFB26A18BDB00281589 /* cooldown.cpp */; };
 		68157E0026A18C0500281589 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68157DFE26A18C0500281589 /* timer.cpp */; };
-		6836C4D326A6ADED00F07205 /* base_related_mission.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6836C4D126A6ADED00F07205 /* base_related_mission.cpp */; };
 		6836C4DC26A6B2BA00F07205 /* base_property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6836C4DA26A6B2BA00F07205 /* base_property.cpp */; };
 		6836C4DF26A6BA2900F07205 /* mission_requirement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6836C4DD26A6BA2900F07205 /* mission_requirement.cpp */; };
 		6836C4E226A6BE3000F07205 /* mission_target.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6836C4E026A6BE3000F07205 /* mission_target.cpp */; };
@@ -25,7 +24,6 @@
 		6836C50526A6C6D600F07205 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6836C50326A6C6D600F07205 /* LaunchScreen.storyboard */; };
 		6836C50826A6C6D600F07205 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836C50726A6C6D600F07205 /* main.m */; };
 		6836C50C26A6C7C200F07205 /* base_property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6836C4DA26A6B2BA00F07205 /* base_property.cpp */; };
-		6836C50D26A6C7C200F07205 /* base_related_mission.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6836C4D126A6ADED00F07205 /* base_related_mission.cpp */; };
 		6836C50E26A6C7CC00F07205 /* mission_target.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6836C4E026A6BE3000F07205 /* mission_target.cpp */; };
 		6836C50F26A6C7CC00F07205 /* mission_reward.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6836C4E326A6C2AD00F07205 /* mission_reward.cpp */; };
 		6836C51026A6C7CC00F07205 /* creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68817B1926A6469E006FC791 /* creature.cpp */; };
@@ -45,6 +43,12 @@
 		6880EBB326A5C4FB0083E538 /* item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6880EBB126A5C4FB0083E538 /* item.cpp */; };
 		68817B1B26A6469E006FC791 /* creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68817B1926A6469E006FC791 /* creature.cpp */; };
 		68AC6D4726A85B72003CF5B3 /* base_count.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68AC6D4526A85B72003CF5B3 /* base_count.cpp */; };
+		68AC6D4826A86085003CF5B3 /* base_count.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68AC6D4526A85B72003CF5B3 /* base_count.cpp */; };
+		68AC6D4926A86093003CF5B3 /* mission_requirement_count.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 684E9C5F26A7BF2200F85CC6 /* mission_requirement_count.cpp */; };
+		68B59FD626A9122B0083951D /* base_related_quest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68B59FD426A9122B0083951D /* base_related_quest.cpp */; };
+		68B59FDA26A913E30083951D /* quest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68B59FD826A913E30083951D /* quest.cpp */; };
+		68B59FDD26A913FC0083951D /* quest_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68B59FDB26A913FC0083951D /* quest_table.cpp */; };
+		68B59FE026A91AC20083951D /* quest_requirement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68B59FDE26A91AC20083951D /* quest_requirement.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,8 +72,6 @@
 		68157DFC26A18BDB00281589 /* cooldown.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cooldown.hpp; sourceTree = "<group>"; };
 		68157DFE26A18C0500281589 /* timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timer.cpp; sourceTree = "<group>"; };
 		68157DFF26A18C0500281589 /* timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = timer.hpp; sourceTree = "<group>"; };
-		6836C4D126A6ADED00F07205 /* base_related_mission.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = base_related_mission.cpp; sourceTree = "<group>"; };
-		6836C4D226A6ADED00F07205 /* base_related_mission.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base_related_mission.hpp; sourceTree = "<group>"; };
 		6836C4D526A6AEB900F07205 /* base.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base.hpp; sourceTree = "<group>"; };
 		6836C4DA26A6B2BA00F07205 /* base_property.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = base_property.cpp; sourceTree = "<group>"; };
 		6836C4DB26A6B2BA00F07205 /* base_property.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base_property.hpp; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 		68817B1D26A67302006FC791 /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
 		68AC6D4526A85B72003CF5B3 /* base_count.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = base_count.cpp; sourceTree = "<group>"; };
 		68AC6D4626A85B72003CF5B3 /* base_count.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base_count.hpp; sourceTree = "<group>"; };
+		68B59FD426A9122B0083951D /* base_related_quest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = base_related_quest.cpp; sourceTree = "<group>"; };
+		68B59FD526A9122B0083951D /* base_related_quest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base_related_quest.hpp; sourceTree = "<group>"; };
+		68B59FD826A913E30083951D /* quest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quest.cpp; sourceTree = "<group>"; };
+		68B59FD926A913E30083951D /* quest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = quest.hpp; sourceTree = "<group>"; };
+		68B59FDB26A913FC0083951D /* quest_table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quest_table.cpp; sourceTree = "<group>"; };
+		68B59FDC26A913FC0083951D /* quest_table.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = quest_table.hpp; sourceTree = "<group>"; };
+		68B59FDE26A91AC20083951D /* quest_requirement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quest_requirement.cpp; sourceTree = "<group>"; };
+		68B59FDF26A91AC20083951D /* quest_requirement.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = quest_requirement.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +165,7 @@
 				68817B1D26A67302006FC791 /* common.hpp */,
 				6836C51B26A6D40000F07205 /* user */,
 				6836C4D026A6ADD200F07205 /* base */,
+				68B59FD726A913D20083951D /* quest */,
 				6836C4CF26A6ADC000F07205 /* mission */,
 				6836C51726A6CF8D00F07205 /* item */,
 				684E9C5B26A7BC7400F85CC6 /* creature */,
@@ -186,8 +197,8 @@
 				6836C4D526A6AEB900F07205 /* base.hpp */,
 				6836C4DA26A6B2BA00F07205 /* base_property.cpp */,
 				6836C4DB26A6B2BA00F07205 /* base_property.hpp */,
-				6836C4D126A6ADED00F07205 /* base_related_mission.cpp */,
-				6836C4D226A6ADED00F07205 /* base_related_mission.hpp */,
+				68B59FD426A9122B0083951D /* base_related_quest.cpp */,
+				68B59FD526A9122B0083951D /* base_related_quest.hpp */,
 				68AC6D4526A85B72003CF5B3 /* base_count.cpp */,
 				68AC6D4626A85B72003CF5B3 /* base_count.hpp */,
 			);
@@ -272,6 +283,19 @@
 				68817B1A26A6469E006FC791 /* creature.hpp */,
 			);
 			path = creature;
+			sourceTree = "<group>";
+		};
+		68B59FD726A913D20083951D /* quest */ = {
+			isa = PBXGroup;
+			children = (
+				68B59FDB26A913FC0083951D /* quest_table.cpp */,
+				68B59FDC26A913FC0083951D /* quest_table.hpp */,
+				68B59FD826A913E30083951D /* quest.cpp */,
+				68B59FD926A913E30083951D /* quest.hpp */,
+				68B59FDE26A91AC20083951D /* quest_requirement.cpp */,
+				68B59FDF26A91AC20083951D /* quest_requirement.hpp */,
+			);
+			path = quest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,7 +389,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				68157DE626A17FAE00281589 /* main.cpp in Sources */,
-				6836C4D326A6ADED00F07205 /* base_related_mission.cpp in Sources */,
 				68157DFA26A18BAE00281589 /* mission.cpp in Sources */,
 				6836C4EE26A6C5DC00F07205 /* mission_table.cpp in Sources */,
 				6836C52126A6D41B00F07205 /* user_mission_table.cpp in Sources */,
@@ -374,12 +397,16 @@
 				68817B1B26A6469E006FC791 /* creature.cpp in Sources */,
 				6836C51A26A6CFA300F07205 /* item_table.cpp in Sources */,
 				6836C51E26A6D40F00F07205 /* user_item_table.cpp in Sources */,
+				68B59FDD26A913FC0083951D /* quest_table.cpp in Sources */,
 				68157DFD26A18BDB00281589 /* cooldown.cpp in Sources */,
 				6836C4E526A6C2AD00F07205 /* mission_reward.cpp in Sources */,
 				6836C4E226A6BE3000F07205 /* mission_target.cpp in Sources */,
+				68B59FDA26A913E30083951D /* quest.cpp in Sources */,
 				6880EBB326A5C4FB0083E538 /* item.cpp in Sources */,
+				68B59FD626A9122B0083951D /* base_related_quest.cpp in Sources */,
 				68AC6D4726A85B72003CF5B3 /* base_count.cpp in Sources */,
 				6836C4DF26A6BA2900F07205 /* mission_requirement.cpp in Sources */,
+				68B59FE026A91AC20083951D /* quest_requirement.cpp in Sources */,
 				6836C4DC26A6B2BA00F07205 /* base_property.cpp in Sources */,
 				68157E0026A18C0500281589 /* timer.cpp in Sources */,
 			);
@@ -391,7 +418,6 @@
 			files = (
 				6836C4FD26A6C6D500F07205 /* ViewController.mm in Sources */,
 				6836C50F26A6C7CC00F07205 /* mission_reward.cpp in Sources */,
-				6836C50D26A6C7C200F07205 /* base_related_mission.cpp in Sources */,
 				6836C51326A6C7CC00F07205 /* mission_table.cpp in Sources */,
 				6836C50C26A6C7C200F07205 /* base_property.cpp in Sources */,
 				6836C51226A6C7CC00F07205 /* mission_requirement.cpp in Sources */,
@@ -399,10 +425,12 @@
 				6836C50E26A6C7CC00F07205 /* mission_target.cpp in Sources */,
 				6836C52326A6D5F200F07205 /* user_item_table.cpp in Sources */,
 				6836C51626A6C7CC00F07205 /* item.cpp in Sources */,
+				68AC6D4926A86093003CF5B3 /* mission_requirement_count.cpp in Sources */,
 				6836C51026A6C7CC00F07205 /* creature.cpp in Sources */,
 				6836C4F726A6C6D500F07205 /* AppDelegate.m in Sources */,
 				6836C50826A6C6D600F07205 /* main.m in Sources */,
 				6836C51426A6C7CC00F07205 /* timer.cpp in Sources */,
+				68AC6D4826A86085003CF5B3 /* base_count.cpp in Sources */,
 				6836C52426A6D5F400F07205 /* user_mission_table.cpp in Sources */,
 				6836C51526A6C7CC00F07205 /* mission.cpp in Sources */,
 				6836C4FA26A6C6D500F07205 /* SceneDelegate.m in Sources */,

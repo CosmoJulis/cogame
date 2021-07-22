@@ -7,13 +7,19 @@
 
 #pragma once
 
-#include <boost/poly_collection/base_collection.hpp>
+//#include <boost/poly_collection/base_collection.hpp>
 #include <iostream>
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
 #include "base.hpp"
 
 
 namespace co {
 
+
+
+/*
 template <typename T, typename U>
 struct is_kind_of {
     static constexpr bool value = std::is_base_of<U, T>::value;
@@ -36,6 +42,8 @@ bool is_kind_of_v = is_kind_of<T, U>::value;
     inline \
     constexpr \
     bool is_kind_of_##CLASSNAME##_v = co::is_kind_of_v<T, CLASSNAME >;
+
+*/
 
 /*
  // <name>

@@ -21,9 +21,19 @@ property(id)
     // debug
     if (id == 7) {
 //        _item_ids.push_back(make_requirement_count<item>(7, 7));
-        _items.insert(make_requirement_count<item>(item(7), 7));
+//        _items.insert(make_requirement_count<item>(item(7), 7));
+        _items.insert(requirement_count<item>(item(7), 7));
     }
 }
+
+requirement::requirement(const requirement & r) :
+property(r)
+{
+    _items = r._items;
+    _creatures = r._creatures;
+    _missions = r._missions;
+}
+
 
 requirement::~requirement() {
     
@@ -68,4 +78,11 @@ bool requirement::is_checked() const {
     }
     
     return true;
+}
+
+
+void requirement::logItems() const {
+    for (const auto & i : _items) {
+        std::cout << "need item: " << i.get_id() << ", count: " << i.get_count() << std::endl;
+    }
 }

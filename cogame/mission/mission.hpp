@@ -29,18 +29,23 @@ public:
 
     mission(int id = 0,
             std::string name = "<untitled>");
+    mission(const mission & m);
     virtual ~mission();
     
 protected:
 
     // mission requirements
     std::vector<std::shared_ptr<requirement>> _requirements;
-    
     // mission targets
     std::vector<std::shared_ptr<target>> _targets;
-    
     // mission rewards
     std::vector<std::shared_ptr<reward>> _rewards;
+public:
+    virtual void logRequirement() const {
+        for (const auto & r : _requirements) {
+            r->logItems();
+        }
+    }
     
 // 任务触发相关
 public:

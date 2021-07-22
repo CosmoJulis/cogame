@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <string>
+#include <iostream>
 
 
 namespace co {
@@ -20,7 +20,9 @@ public:
                   std::string name = "<untitled>") :
     _id(id),
     _name(name)
-    { }
+    {
+        std::cout << "property id = " << id << std::endl;
+    }
 protected:
     int _id;
     std::string _name;

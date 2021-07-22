@@ -3,4 +3,126 @@
    uuid = "20D4547E-ABD9-477E-B8B3-CE20197CD194"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "754F2ABA-7EA7-4303-BDCC-15BBFFCECCEB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7458AE54-5892-403D-833B-3547659875C0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cogame/mission/requirement/mission_requirement_count.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "requirement_count(rc)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7458AE54-5892-403D-833B-3547659875C0 - 9034a473c4c3ae4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "co::mission_ns::requirement_count&lt;co::item_ns::item&gt;::requirement_count(co::mission_ns::requirement_count&lt;co::item_ns::item&gt; const&amp;)"
+                  moduleName = "demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmojulis/Desktop/cogame/cogame/mission/requirement/mission_requirement_count.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  uuid = "7458AE54-5892-403D-833B-3547659875C0 - 9034a473c4c3ae4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "co::mission_ns::requirement_count&lt;co::item_ns::item&gt;::requirement_count(co::mission_ns::requirement_count&lt;co::item_ns::item&gt; const&amp;)"
+                  moduleName = "demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmojulis/Desktop/cogame/cogame/mission/requirement/mission_requirement_count.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  uuid = "7458AE54-5892-403D-833B-3547659875C0 - eb66ab00e8a5dc25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "co::mission_ns::requirement_count&lt;co::creature_ns::creature&gt;::requirement_count(co::mission_ns::requirement_count&lt;co::creature_ns::creature&gt; const&amp;)"
+                  moduleName = "demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmojulis/Desktop/cogame/cogame/mission/requirement/mission_requirement_count.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  uuid = "7458AE54-5892-403D-833B-3547659875C0 - eb66ab00e8a5dc25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "co::mission_ns::requirement_count&lt;co::creature_ns::creature&gt;::requirement_count(co::mission_ns::requirement_count&lt;co::creature_ns::creature&gt; const&amp;)"
+                  moduleName = "demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmojulis/Desktop/cogame/cogame/mission/requirement/mission_requirement_count.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  uuid = "7458AE54-5892-403D-833B-3547659875C0 - 6766fb8bc333f502"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "co::mission_ns::requirement_count&lt;co::mission_ns::mission&gt;::requirement_count(co::mission_ns::requirement_count&lt;co::mission_ns::mission&gt; const&amp;)"
+                  moduleName = "demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmojulis/Desktop/cogame/cogame/mission/requirement/mission_requirement_count.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  uuid = "7458AE54-5892-403D-833B-3547659875C0 - 6766fb8bc333f502"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "co::mission_ns::requirement_count&lt;co::mission_ns::mission&gt;::requirement_count(co::mission_ns::requirement_count&lt;co::mission_ns::mission&gt; const&amp;)"
+                  moduleName = "demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmojulis/Desktop/cogame/cogame/mission/requirement/mission_requirement_count.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -29,7 +29,12 @@ item_table * pit = item_table::get_table();
 - (void)viewDidLoad {
     [super viewDidLoad];
     mission m (7);
-    pmt->missions.insert(m);
+//    pmt->missions.insert(m);
+    
+    
+//    for (auto & i : pmt->missions) {
+//        i.logRequirement();
+//    }
 }
 
 - (IBAction)requirementButtonDidTap:(id)sender {
@@ -58,8 +63,11 @@ item_table * pit = item_table::get_table();
         if (i.is_related_mission(m)) {
             if (m.meet()) {
                 m.update(i);
+            } else {
+                m.logRequirement();
             }
         }
+        m.logRequirement();
     }
 
 

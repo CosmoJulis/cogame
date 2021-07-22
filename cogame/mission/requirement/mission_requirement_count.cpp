@@ -22,14 +22,19 @@ template <typename T>
 bool requirement_count<T>::is_checked() const {
     if constexpr (is_kind_of_item_v<T>) {
         item_table & it = *(item_table::get_table());
+        int count = 0;
         for (const auto & i : it.items) {
+            std::cout << "i.id = " << i.get_id() << std::endl;
             if (i.get_id() == _t.get_id()) {
-                if (i.get_number() < _count) {
-                    return false;
+                count += i.get_number();
+                if (count >= _count) {
+                    break;
                 }
             }
         }
-
+        if (count < _count) {
+            return false;
+        }
     }
     else if (is_kind_of_creature_v<T>) {
         

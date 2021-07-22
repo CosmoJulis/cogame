@@ -39,13 +39,25 @@ property(id,
         _related_mission_ids.insert(7);
         
         // require 7 x item_7
-        _requirements.push_back(std::make_unique<requirement>(requirement(7)));
+        _requirements.push_back(std::make_shared<requirement>(requirement(7)));
 
         // target 17 x item_7
-        _targets.push_back(std::make_unique<target>(target(7)));
+        _targets.push_back(std::make_shared<target>(target(7)));
         
-        _rewards.push_back(std::make_unique<reward>(reward(7)));
+        _rewards.push_back(std::make_shared<reward>(reward(7)));
     }
+}
+
+mission::mission(const mission & m) :
+base::property(m)
+{
+    std::cout << "mission copy cons\n";
+            
+    _related_mission_ids = m._related_mission_ids;
+    _requirements = m._requirements;
+    _targets = m._targets;
+    _rewards = m._rewards;
+
 }
 
 mission::~mission() { }
@@ -82,3 +94,11 @@ void mission::update(const T & t) {
     }
 }
 
+template
+void mission::update<item>(const item & i);
+
+template
+void mission::update<creature>(const creature & c);
+
+template
+void mission::update<mission>(const mission & m);

@@ -28,18 +28,17 @@ class requirement : public base::property {
      */
 public:
     requirement(int id = 0);
+    requirement(const requirement & r);
     virtual ~requirement();
 
 protected:
 
-//    std::vector<requirement_count<item_ns::item>> _item_ids;
-//    std::vector<requirement_count<creature_ns::creature>> _creature_ids;
-//    std::vector<requirement_count<mission_ns::mission>> _mission_ids;
-    
-    
     boost::base_collection<requirement_count<item_ns::item>> _items;
     boost::base_collection<requirement_count<creature_ns::creature>> _creatures;
     boost::base_collection<requirement_count<mission_ns::mission>> _missions;
+    
+public:
+    virtual void logItems() const;
     
 public:
     bool is_checked() const;
