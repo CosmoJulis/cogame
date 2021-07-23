@@ -17,9 +17,6 @@ namespace quest_ns {
 class requirement : public base::property, public base::check
 {
 public:
-    static const requirement & load_from_id(const int & requirement_id);
-    
-public:
     requirement(int id = 0);
     virtual ~requirement();
     

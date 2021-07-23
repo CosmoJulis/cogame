@@ -29,7 +29,7 @@ item_table & uit = item_table::get_user_table();
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    quest q (7);
+    const quest & q = 
     uqt.quest_map[7] = q;
 }
 
@@ -59,6 +59,7 @@ item_table & uit = item_table::get_user_table();
     for (auto & [id, q] : uqt.quest_map) {
         if (i.is_related(q.get_id())) {
             if (q.is_meet()) {
+                std::cout << "is meet\n";
                 q.update(i.get_id());
             }
         }

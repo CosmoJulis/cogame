@@ -16,6 +16,11 @@ quest::quest(int id, const std::string & name) :
 property(type::quest, id, name)
 {
     std::cout << "construct quest id: " << id << std::endl;
+    
+    // debug
+    if (id == 7) {
+        _requirement_id = 7;
+    }
 }
 
 quest::~quest() { }
@@ -24,7 +29,7 @@ bool quest::is_meet() const
 {
     if (_requirement_id > 0) {
         try {
-            return requirement::load_from_id(_requirement_id).is_checked();
+            return property::load_from_id<requirement>(_requirement_id).is_checked();
         } catch (exception & e) {
             return false;
         }

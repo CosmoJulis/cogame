@@ -24,7 +24,11 @@ enum class type {
     unknown,
 };
 
+
 class property {
+public:
+    template <typename T>
+    static const T & load_from_id(const int & id);
 public:
     property(type type = type::unknown,
              int id = 0,
