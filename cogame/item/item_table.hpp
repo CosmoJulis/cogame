@@ -16,9 +16,10 @@ namespace co::item_ns {
 class table {
 public:
     static table & get_global_table();
+    
 private:
-    static table * get_global_table_pointer();
     static void config_global_table(table * pt);
+    
 public:
     std::unordered_map<int, item> item_map;
 };

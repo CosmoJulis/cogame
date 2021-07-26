@@ -16,9 +16,10 @@ namespace co::quest_ns {
 class requirement_table {
 public:
     static requirement_table & get_global_table();
+    
 private:
-    static requirement_table * get_global_table_pointer();
     static void config_global_table(requirement_table * pt);
+    
 public:
     std::unordered_map<int, requirement> requirement_map;
 };
