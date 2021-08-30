@@ -39,7 +39,7 @@ bool quest::is_meet() const
 
 void quest::meet()
 {
-    
+    std::cout << "meet quest\n";
 }
 
 bool quest::is_related(const int & id) const

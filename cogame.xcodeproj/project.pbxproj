@@ -29,6 +29,11 @@
 		684E9C5E26A7BC8200F85CC6 /* creature_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 684E9C5C26A7BC8200F85CC6 /* creature_table.cpp */; };
 		6880EBB326A5C4FB0083E538 /* item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6880EBB126A5C4FB0083E538 /* item.cpp */; };
 		68817B1B26A6469E006FC791 /* creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68817B1926A6469E006FC791 /* creature.cpp */; };
+		688F356926D8C33E006157B5 /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 688F356726D8C33E006157B5 /* vector.cpp */; };
+		688F356C26D8C355006157B5 /* aoi_point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 688F356A26D8C355006157B5 /* aoi_point.cpp */; };
+		688F357126D8C3A8006157B5 /* aoi_hexagon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 688F356F26D8C3A8006157B5 /* aoi_hexagon.cpp */; };
+		688F357526D8C67C006157B5 /* base_description.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 688F357326D8C67C006157B5 /* base_description.cpp */; };
+		688F357826D8E3B0006157B5 /* aoi_square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 688F357626D8E3B0006157B5 /* aoi_square.cpp */; };
 		68B59FD626A9122B0083951D /* base_related_quest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68B59FD426A9122B0083951D /* base_related_quest.cpp */; };
 		68B59FDA26A913E30083951D /* quest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68B59FD826A913E30083951D /* quest.cpp */; };
 		68B59FDD26A913FC0083951D /* quest_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68B59FDB26A913FC0083951D /* quest_table.cpp */; };
@@ -102,6 +107,17 @@
 		68817B1926A6469E006FC791 /* creature.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = creature.cpp; sourceTree = "<group>"; };
 		68817B1A26A6469E006FC791 /* creature.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = creature.hpp; sourceTree = "<group>"; };
 		68817B1D26A67302006FC791 /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
+		688F356726D8C33E006157B5 /* vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
+		688F356826D8C33E006157B5 /* vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vector.hpp; sourceTree = "<group>"; };
+		688F356A26D8C355006157B5 /* aoi_point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aoi_point.cpp; sourceTree = "<group>"; };
+		688F356B26D8C355006157B5 /* aoi_point.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = aoi_point.hpp; sourceTree = "<group>"; };
+		688F356E26D8C38D006157B5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		688F356F26D8C3A8006157B5 /* aoi_hexagon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aoi_hexagon.cpp; sourceTree = "<group>"; };
+		688F357026D8C3A8006157B5 /* aoi_hexagon.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = aoi_hexagon.hpp; sourceTree = "<group>"; };
+		688F357326D8C67C006157B5 /* base_description.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = base_description.cpp; sourceTree = "<group>"; };
+		688F357426D8C67C006157B5 /* base_description.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base_description.hpp; sourceTree = "<group>"; };
+		688F357626D8E3B0006157B5 /* aoi_square.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aoi_square.cpp; sourceTree = "<group>"; };
+		688F357726D8E3B0006157B5 /* aoi_square.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = aoi_square.hpp; sourceTree = "<group>"; };
 		68B59FD426A9122B0083951D /* base_related_quest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = base_related_quest.cpp; sourceTree = "<group>"; };
 		68B59FD526A9122B0083951D /* base_related_quest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = base_related_quest.hpp; sourceTree = "<group>"; };
 		68B59FD826A913E30083951D /* quest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quest.cpp; sourceTree = "<group>"; };
@@ -169,11 +185,9 @@
 			children = (
 				68157DE526A17FAE00281589 /* main.cpp */,
 				68817B1D26A67302006FC791 /* common.hpp */,
-				6836C51B26A6D40000F07205 /* user */,
 				6836C4D026A6ADD200F07205 /* base */,
-				68B59FD726A913D20083951D /* quest */,
-				6836C51726A6CF8D00F07205 /* item */,
-				684E9C5B26A7BC7400F85CC6 /* creature */,
+				688F356626D8C32D006157B5 /* server */,
+				688F357226D8C461006157B5 /* game */,
 				68157DFB26A18BDB00281589 /* cooldown.cpp */,
 				68157DFC26A18BDB00281589 /* cooldown.hpp */,
 				68157DFE26A18C0500281589 /* timer.cpp */,
@@ -194,6 +208,8 @@
 				68B59FF826A94E970083951D /* base_count.hpp */,
 				68B59FE126A943E60083951D /* base_check.cpp */,
 				68B59FE226A943E60083951D /* base_check.hpp */,
+				688F357326D8C67C006157B5 /* base_description.cpp */,
+				688F357426D8C67C006157B5 /* base_description.hpp */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -247,6 +263,41 @@
 				68817B1A26A6469E006FC791 /* creature.hpp */,
 			);
 			path = creature;
+			sourceTree = "<group>";
+		};
+		688F356626D8C32D006157B5 /* server */ = {
+			isa = PBXGroup;
+			children = (
+				688F356726D8C33E006157B5 /* vector.cpp */,
+				688F356826D8C33E006157B5 /* vector.hpp */,
+				688F356D26D8C385006157B5 /* aoi */,
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		688F356D26D8C385006157B5 /* aoi */ = {
+			isa = PBXGroup;
+			children = (
+				688F356E26D8C38D006157B5 /* README.md */,
+				688F356A26D8C355006157B5 /* aoi_point.cpp */,
+				688F356B26D8C355006157B5 /* aoi_point.hpp */,
+				688F356F26D8C3A8006157B5 /* aoi_hexagon.cpp */,
+				688F357026D8C3A8006157B5 /* aoi_hexagon.hpp */,
+				688F357626D8E3B0006157B5 /* aoi_square.cpp */,
+				688F357726D8E3B0006157B5 /* aoi_square.hpp */,
+			);
+			path = aoi;
+			sourceTree = "<group>";
+		};
+		688F357226D8C461006157B5 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				6836C51B26A6D40000F07205 /* user */,
+				68B59FD726A913D20083951D /* quest */,
+				6836C51726A6CF8D00F07205 /* item */,
+				684E9C5B26A7BC7400F85CC6 /* creature */,
+			);
+			path = game;
 			sourceTree = "<group>";
 		};
 		68B59FD726A913D20083951D /* quest */ = {
@@ -362,20 +413,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688F357126D8C3A8006157B5 /* aoi_hexagon.cpp in Sources */,
 				68157DE626A17FAE00281589 /* main.cpp in Sources */,
 				68B59FE326A943E60083951D /* base_check.cpp in Sources */,
 				68B59FEC26A949510083951D /* user_quest_table.cpp in Sources */,
 				684E9C5E26A7BC8200F85CC6 /* creature_table.cpp in Sources */,
+				688F356926D8C33E006157B5 /* vector.cpp in Sources */,
 				68817B1B26A6469E006FC791 /* creature.cpp in Sources */,
 				6836C51A26A6CFA300F07205 /* item_table.cpp in Sources */,
 				68B5A00126A958990083951D /* quest_target_table.cpp in Sources */,
 				6836C51E26A6D40F00F07205 /* user_item_table.cpp in Sources */,
+				688F356C26D8C355006157B5 /* aoi_point.cpp in Sources */,
 				68B59FDD26A913FC0083951D /* quest_table.cpp in Sources */,
 				68B5A00526A958A10083951D /* quest_reward_table.cpp in Sources */,
 				68B59FE926A945CC0083951D /* quest_reward.cpp in Sources */,
 				68157DFD26A18BDB00281589 /* cooldown.cpp in Sources */,
 				68B59FDA26A913E30083951D /* quest.cpp in Sources */,
+				688F357526D8C67C006157B5 /* base_description.cpp in Sources */,
 				6880EBB326A5C4FB0083E538 /* item.cpp in Sources */,
+				688F357826D8E3B0006157B5 /* aoi_square.cpp in Sources */,
 				68B59FE626A945C40083951D /* quest_target.cpp in Sources */,
 				68B59FFD26A953E80083951D /* quest_requirement_table.cpp in Sources */,
 				68B59FD626A9122B0083951D /* base_related_quest.cpp in Sources */,
