@@ -16,9 +16,11 @@ namespace co::quest_ns {
 class target_table {
 public:
     static target_table & get_global_table();
+    
 private:
     static target_table * get_global_table_singleton();
     static void config_global_table(target_table * pt);
+    
 public:
     std::unordered_map<int, target> target_map;
 };
