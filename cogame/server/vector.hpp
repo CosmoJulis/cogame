@@ -17,6 +17,13 @@ namespace co {
 template <typename T, int count = 2>
 class vector : public base::description {
 public:
+    T & u = operator[](0);
+    T & v = operator[](1);
+    
+    T & i = operator[](0);
+    T & j = operator[](1);
+    T & k = operator[](2);
+    
     T & x = operator[](0);
     T & y = operator[](1);
     T & z = operator[](2);
@@ -33,7 +40,7 @@ public:
             int _index = 0;
             (void)std::initializer_list<T>{
                 static_cast<T>(([&args, &_index, this] {
-                    tc[_index] = args;
+                    _tc[_index] = args;
                     _index++;
                 }(), NULL))...
             };
@@ -43,7 +50,7 @@ public:
     vector(std::initializer_list<T> list = {}) {
         int _index = 0;
         for (auto & t : list) {
-            tc[_index] = t;
+            _tc[_index] = t;
             _index++;
         }
     }
@@ -56,7 +63,7 @@ public:
     
     T & operator[](size_t index) {
         if (index < count) {
-            return tc[index];
+            return _tc[index];
         } else {
             return get_default();
         }
@@ -64,12 +71,26 @@ public:
     
     const T & operator[](size_t index) const {
         if (index < count) {
-            return tc[index];
+            return _tc[index];
         } else {
             return get_default();
         }
     }
 
+    friend bool operator==(const vector & lhs, const vector & rhs) {
+        int c = sizeof(_tc);
+        if (c == sizeof(rhs._tc)) {
+            bool equal = true;
+            for (int i = 0; i < c; i++) {
+                equal = (lhs[i] == rhs[i]);
+                if (!equal) {
+                    break;
+                }
+            }
+            return equal;
+        }
+        return false;
+    }
     
 private:
     T & get_default() const {
@@ -77,7 +98,7 @@ private:
         return _default;
     }
     
-    T tc[count] = {};
+    T _tc[count] = {};
     
 public:
     std::string message() const override {

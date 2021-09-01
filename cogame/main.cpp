@@ -12,17 +12,17 @@
 #include "vector.hpp"
 #include "aoi_point.hpp"
 
+#include <unordered_set>
+
+
+
 int main()
 {
-
-    co::vector<double, 3> pos (1, 2, 3);
-    std::cout << pos << std::endl;
-
-    co::vector<float, 3> posf {1, 2, 3};
-    std::cout << posf << std::endl;
-
     
+// TODO: hash set hash construct
     
+    auto f = pow(M_PI, 1.0/3) * pow(6 * 7.6631189696, 2.0/3)/20.645728807;
+    std::cout << f << std::endl;
     
     
     return 0;
