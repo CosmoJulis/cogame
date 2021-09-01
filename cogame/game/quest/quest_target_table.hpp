@@ -18,6 +18,7 @@ public:
     static target_table & get_global_table();
     
 private:
+    static target_table * get_global_table_singleton();
     static void config_global_table(target_table * pt);
     
 public:

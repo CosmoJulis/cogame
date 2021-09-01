@@ -18,6 +18,7 @@ public:
     static reward_table & get_global_table();
     
 private:
+    static reward_table * get_global_table_singleton();
     static void config_global_table(reward_table * pt);
     
 public:

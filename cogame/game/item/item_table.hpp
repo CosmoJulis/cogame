@@ -18,6 +18,7 @@ public:
     static table & get_global_table();
     
 private:
+    static table * get_global_table_singleton();
     static void config_global_table(table * pt);
     
 public:

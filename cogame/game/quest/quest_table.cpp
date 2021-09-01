@@ -13,12 +13,18 @@ using namespace quest_ns;
 
 table & table::get_global_table()
 {
+    return *get_global_table_singleton();
+}
+
+
+table * table::get_global_table_singleton()
+{
     static table * p = nullptr;
     if (p == nullptr) {
         p = new table();
         config_global_table(p);
     }
-    return *p;
+    return p;
 }
 
 void table::config_global_table(table * pt)

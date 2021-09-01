@@ -17,6 +17,9 @@ class quest_table {
 public:
     static quest_table & get_user_table();
 
+private:
+    static quest_table * get_user_table_singleton();
+
 public:
     std::unordered_map<int, quest_ns::quest> quest_map;
 };
