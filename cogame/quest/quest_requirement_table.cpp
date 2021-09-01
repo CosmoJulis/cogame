@@ -13,11 +13,11 @@ using namespace quest_ns;
 
 requirement_table & requirement_table::get_global_table()
 {
-    return *get_global_table_pointer();
+    return *get_global_table_singleton();
 }
 
 
-requirement_table * requirement_table::get_global_table_pointer()
+requirement_table * requirement_table::get_global_table_singleton()
 {
     static requirement_table * p = nullptr;
     if (p == nullptr) {

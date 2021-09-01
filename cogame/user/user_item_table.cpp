@@ -12,11 +12,11 @@ using namespace co::user;
 
 item_table & item_table::get_user_table()
 {
-    return *get_user_table_pointer();
+    return *get_user_table_singleton();
 }
 
 
-item_table * item_table::get_user_table_pointer()
+item_table * item_table::get_user_table_singleton()
 {
     static item_table * p = new item_table();
     return p;

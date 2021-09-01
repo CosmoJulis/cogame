@@ -13,11 +13,11 @@ using namespace quest_ns;
 
 table & table::get_global_table()
 {
-    return *get_global_table_pointer();
+    return *get_global_table_singleton();
 }
 
 
-table * table::get_global_table_pointer()
+table * table::get_global_table_singleton()
 {
     static table * p = nullptr;
     if (p == nullptr) {

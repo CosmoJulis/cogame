@@ -17,7 +17,7 @@ class item_table {
 public:
     static item_table & get_user_table();
 private:
-    static item_table * get_user_table_pointer();
+    static item_table * get_user_table_singleton();
 public:
     std::unordered_map<int, item_ns::item> item_map;
 };

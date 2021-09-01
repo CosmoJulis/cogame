@@ -13,11 +13,11 @@ using namespace quest_ns;
 
 reward_table & reward_table::get_global_table()
 {
-    return *get_global_table_pointer();
+    return *get_global_table_singleton();
 }
 
 
-reward_table * reward_table::get_global_table_pointer()
+reward_table * reward_table::get_global_table_singleton()
 {
     static reward_table * p = nullptr;
     if (p == nullptr) {

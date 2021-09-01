@@ -17,7 +17,7 @@ class table {
 public:
     static table & get_global_table();
 private:
-    static table * get_global_table_pointer();
+    static table * get_global_table_singleton();
     static void config_global_table(table * pt);
 public:
     std::unordered_map<int, quest> quest_map;
